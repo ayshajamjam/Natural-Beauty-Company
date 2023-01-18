@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id = "productDiv" class = "container">
+    <div class = "row">
+        <div class = 'col-md-10'></div>
+        <div class = 'col-md-2'><button id = "edit"><a class = "link" href='/edit/{{product.id}}'>Edit</a></button></div>
+    </div>
+    <div class = "row">
+        <div class = "row"><h1>{{product.name}}</h1> </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-7">
+            <div class = "row">
+                <p class = "subheading">{{product.type}} by {{product.company}}</p>
+            </div>
+            <div class = "row">
+                <p>Price: </p>
+                <p id = "cost_info">${{product.cost}}</p>
+                <p>Size: {{product.size}}oz</p>
+            </div>
+            <div><img class = "product_img" src = {{product.image}} alt = "Image of {{product.name}} by {{product.company}}"></div>
+            <div class = "row">
+                <p>{{product.summary}}</p>
+            </div>
+        </div>
+        <div class = "col-md-5">
+            <div>
+                Problem:
+                <ul>
+                    {% for problem in product.problem %}
+                        <li>{{problem}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                Skin Type:
+                <ul>
+                    {% for type in product.skin %}
+                        <li>{{type}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                Ingredients:
+                <ul>
+                    {% for ingredient in product.ingredients %}
+                        <li>{{ingredient}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div><p>How to Apply: {{product.directions}}</pow></div>
+        </div>
+        
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'products.js') }}"></script>
+
+    <script>
+        let data = {{data|tojson}} 
+        console.log(data)
+    </script>
+
+    <div class = "container">
+        <div class = "row">
+            <div id = "home_title">
+                <h1>Most Popular Natural Skincare Products This Winter</h1>
+                <img id = "home_img" src = "/static/images/home_img.jpeg" alt = "Woman applying skincare product to face">
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-2"></div>
+            <div id = "home_description" class = "col-md-7">
+                <p>Can't find the natural skincare products you need? Struggling to put together the perfect skincare regimen? We've got you covered!</p>
+            </div>
+            <div class = "col-md-2"></div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-3"></div>
+            <h2 class = "col-md-8 rec_products_heading">Recommended Products</h2>
+            <div class = "col-md-1"></div>
+        </div>
+        <div id = "top_products" class = "row"></div>
+    </div>
+
+    
+
+{% endblock %}

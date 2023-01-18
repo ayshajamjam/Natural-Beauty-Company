@@ -1,0 +1,90 @@
+h1{
+    margin-top: 15px;
+}
+
+.product_img{
+    width: 300px;
+    height: 300px;
+}
+
+.list{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#home_img{
+    width: 1000px;
+    height: 350px;
+}
+
+#home_description{
+    padding-top: 30px;
+}
+
+.rec_products_heading{
+    padding-bottom: 30px;
+    color: #92584b
+}
+
+.success{
+    color:green
+}
+.error{
+    color: red
+}
+
+#edit{
+    margin-top: 10px;
+    background-color: rgb(231, 231, 231);
+    text-decoration: none;
+}
+
+.link{
+    background-color: none;
+    text-decoration: none;
+    color: black
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.subheading {
+    font-size: 20px;
+}
+
+#cost_info{
+    color: salmon;
+    margin-right: 10px;
+}
+
+.links_home{
+    background-color: none;
+    text-decoration: none;
+    color: rgb(104, 104, 104)
+}
+
+#top_products{
+    background-color: rgb(226, 226, 226);
+    padding: 20px;
+}
+
+.submit_btn{
+    background-color: salmon;
+}
+
+#blueChecker {
+    background: repeating-conic-gradient(#0051ba 0% 25%, #f2f2dd 0% 50%) 50% / 40px 200px;
+    width: 100%;
+    height: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    animation: backgroundScroll 100s infinite linear wrap;
+}
+
+@keyframes backgroundScroll{
+    from{left:0%}to{right:0%}
+    flex-wrap: wrap;
+}

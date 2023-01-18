@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'editpage.js') }}"></script>
+    
+    <script>
+        let product = {{product|tojson}} 
+        console.log(product)
+    </script>
+
+    <div id = "edit_page" class = "container">
+        <div id="edit_product_heading"><h1>Edit Product</h1></div>
+        
+        <form>
+            <label for = "name_input_edit">Name:</label><br>
+            <input id = "name_input_edit" type = "text"></input><br>
+
+            <label for = "company_input_edit">Company:</label><br>
+            <input id = "company_input_edit" type = "text"></input><br>
+
+            <label for = "type_input_edit">Product Type:</label><br>
+            <input id = "type_input_edit" type = "text"></input><br>
+
+            <label for = "size_input_edit">Size:</label><br>
+            <input id = "size_input_edit" type = "number"></input><br>
+
+            <label for = "cost_input_edit">Cost:</label><br>
+            <input id = "cost_input_edit" type = "number"></input><br>
+
+            <label for = "image_input_edit">Upload image:</label><br>
+            <input id = "image_input_edit" type = "url"></input><br>
+
+            <label for = "summary_input_edit">Product description:</label><br>
+            <textarea id = "summary_input_edit" rows="6" cols="50"></textarea><br>
+
+            <label for = "container_input_edit">Container type:</label><br>
+            <input id = "container_input_edit" type = "text"></input><br>
+
+            <label for = "ingredients_input_edit">Ingredients:</label><br>
+            <input id = "ingredients_input_edit" type = "text"></input>
+            <button id = "add_ingredient_edit" type="button">Add ingredient</button><br>
+
+            <label for = "directions_input_edit">Directions (how to apply):</label><br>
+            <textarea id = "directions_input_edit" rows="4" cols="50"></textarea><br>
+            
+            
+            <form required>
+                <p>Skin types</p>
+                <ul id = "skin_input_edit">
+                    <input id = "all_edit" value = "All" type = "checkbox" name = "skin" value = "add"></input>
+                    <label for= "all_edit">All</label><br>
+        
+                    <input id = "dry_edit" value = "Dry" type = "checkbox" name = "skin"></input>
+                    <label for= "dry_edit">Dry</label><br>
+        
+                    <input id = "normal_edit" value = "Normal" type = "checkbox" name = "skin"></input>
+                    <label for= "normal_edit">Normal</label><br>
+        
+                    <input id = "combo_edit" value = "Combo" type = "checkbox" name = "skin"></input>
+                    <label for= "combo">Combo</label><br>
+        
+                    <input id = "sensitive_edit" value = "Sensitive" type = "checkbox" name = "skin"></input>
+                    <label for= "sensitive">Sensitive</label><br>
+        
+                    <input id = "acneic_edit" value = "Acneic" type = "checkbox" name = "skin"></input>
+                    <label for= "acneic">Acneic</label><br>
+        
+                    <input id = "reactive_edit" value = "Reactive" type = "checkbox" name = "skin"></input>
+                    <label for= "reactive_edit">Reactive</label><br>
+        
+                    <input id = "stressed_edit" value = "Stressed" type = "checkbox" name = "skin"></input>
+                    <label for= "stressed_edit">Stressed</label><br>
+                </ul>
+            </form>
+
+            <form required>
+                <p>Skin problems: </p>
+                <ul id = "problem_input">
+                    <input id = "dark_spots_edit" value = "Dark patches and scars" type = "checkbox" name = "problem"></input>
+                    <label for= "dark_spots_edit">Dark patches and scars</label><br>
+        
+                    <input id = "wrinkles_edit" value = "Fine Lines and Wrinkles" type = "checkbox" name = "problem"></input>
+                    <label for= "wrinkles_edit">Fine Lines and Wrinkles</label><br>
+        
+                    <input id = "dryness_edit" value = "Dryness" type = "checkbox" name = "problem"></input>
+                    <label for= "dryness_edit">Dryness</label><br>
+        
+                    <input id = "dehydration_edit" value = "Dehydration" type = "checkbox" name = "problem"></input>
+                    <label for= "dehydration_edit">Dehydration</label><br>
+        
+                    <input id = "redness_edit" value = "Redness" type = "checkbox" name = "problem"></input>
+                    <label for= "redness_edit">Redness</label><br>
+        
+                    <input id = "aging_edit" value = "Anti-aging" type = "checkbox" name = "problem"></input>
+                    <label for= "aging_edit">Anti-aging</label><br>
+        
+                    <input id = "dull_edit" value = "Dull skin" type = "checkbox" name = "problem"></input>
+                    <label for= "dull_edit">Dull skin</label><br>
+        
+                    <input id = "hyperpigmentation_edit" value = "Hyperpigmentation" type = "checkbox" name = "problem"></input>
+                    <label for= "hyperpigmentation_edit">Hyperpigmentation</label><br>
+                    
+                    <input id = "acne_edit" value = "Acne" type = "checkbox" name = "problem"></input>
+                    <label for= "acne_edit">Acne</label><br>
+
+                    <input id = "capillaries_edit" value = "Dilated capillaries" type = "checkbox" name = "problem"></input>
+                    <label for= "capillaries_edit">Dilated capillaries</label><br>
+
+                    <input id = "blackheads_edit" value = "Blackheads" type = "checkbox" name = "problem"></input>
+                    <label for= "blackheads_edit">Blackheads</label><br>
+
+                    <input id = "rough_edit" value = "Rough texture" type = "checkbox" name = "problem"></input>
+                    <label for= "rough_edit">Rough texture</label><br>
+
+                    <input id = "inflammation_edit" value = "Inflammation" type = "checkbox" name = "problem"></input>
+                    <label for= "inflammation_edit">Inflammation</label><br>
+                </ul>
+            </form>
+
+            <button id= "submit_edit" class="submit_btn">Submit</button>
+            <button id= "discard">Discard</button>
+
+        </form>
+        </div>
+    </div>
+
+{% endblock %}
+

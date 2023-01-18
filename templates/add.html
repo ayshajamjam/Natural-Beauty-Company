@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'products.js') }}"></script>
+    
+    <script>
+        let data = {{data|tojson}} 
+        console.log(data)
+    </script>
+
+    <div id = "log_ui" class = "container">
+        <div id="new_product_div"><h1>Add a New Product</h1></div>
+        
+        <form>
+            <label for = "name_input">Name:</label><br>
+            <input id = "name_input" type = "text" placeholder = "name"></input><br>
+
+            <label for = "company_input">Company:</label><br>
+            <input id = "company_input" type = "text" placeholder = "company"></input><br>
+
+            <label for = "type_input">Product Type:</label><br>
+            <input id = "type_input" type = "text" placeholder = "type"></input><br>
+
+            <label for = "size_input">Size:</label><br>
+            <input id = "size_input" type = "number" placeholder = "size (oz)"></input><br>
+
+            <label for = "cost_input">Cost:</label><br>
+            <input id = "cost_input" type = "number" placeholder = "cost (USD)"></input><br>
+
+            <label for = "image_input">Upload image:</label><br>
+            <input id = "image_input" type = "url" placeholder="url"></input><br>
+
+            <label for = "summary_input">Product description:</label><br>
+            <textarea id = "summary_input" placeholder = "description" rows="6" cols="50"></textarea><br>
+
+            <label for = "container_input">Container type:</label><br>
+            <input id = "container_input" type = "text" placeholder = "container type"></input><br>
+
+            <label for = "ingredients_input">Ingredients:</label><br>
+            <input id = "ingredients_input" type = "text" placeholder = "ingredients"></input>
+            <button id = "add_ingredient" type="button">Add ingredient</button><br>
+
+            <label for = "directions_input">Directions (how to apply):</label><br>
+            <textarea id = "directions_input" placeholder = "directions for application" rows="4" cols="50"></textarea><br>
+            
+            
+            <form required>
+                <p>Skin types</p>
+                <ul id = "skin_input">
+                    <input id = "all" type = "checkbox" name = "skin" value = "All"></input>
+                    <label for= "all">All</label><br>
+        
+                    <input id = "dry" type = "checkbox" name = "skin" value = "Dry"></input>
+                    <label for= "dry">Dry</label><br>
+        
+                    <input id = "normal" type = "checkbox" name = "skin" value = "Normal"></input>
+                    <label for= "normal">Normal</label><br>
+        
+                    <input id = "combo" type = "checkbox" name = "skin" value = "Combo"></input>
+                    <label for= "combo">Combo</label><br>
+        
+                    <input id = "sensitive" type = "checkbox" name = "skin" value = "Sensitive"></input>
+                    <label for= "sensitive">Sensitive</label><br>
+        
+                    <input id = "acneic" type = "checkbox" name = "skin" value = "Acneic"></input>
+                    <label for= "acneic">Acneic</label><br>
+        
+                    <input id = "reactive" type = "checkbox" name = "skin" value = "Reactive"></input>
+                    <label for= "reactive">Reactive</label><br>
+        
+                    <input id = "stressed" type = "checkbox" name = "skin" value = "Stressed"></input>
+                    <label for= "stressed">Stressed</label><br>
+                </ul>
+            </form>
+
+            <form required>
+                <p>Skin problems: </p>
+                <ul id = "problem_input">
+                    <input id = "dark_spots" type = "checkbox" name = "problem" value = "Dark patches and scars"></input>
+                    <label for= "dark_spots">Dark patches and scars</label><br>
+        
+                    <input id = "wrinkles" type = "checkbox" name = "problem" value = "Fine Lines and Wrinkles"></input>
+                    <label for= "wrinkles">Fine Lines and Wrinkles</label><br>
+        
+                    <input id = "dryness" type = "checkbox" name = "problem" value = "Dryness"></input>
+                    <label for= "dryness">Dryness</label><br>
+        
+                    <input id = "dehydration" type = "checkbox" name = "problem" value = "Dehydration"></input>
+                    <label for= "dehydration">Dehydration</label><br>
+        
+                    <input id = "redness" type = "checkbox" name = "problem" value = "Redness"></input>
+                    <label for= "redness">Redness</label><br>
+        
+                    <input id = "aging" type = "checkbox" name = "problem" value = "Anti-aging"></input>
+                    <label for= "aging">Anti-aging</label><br>
+        
+                    <input id = "dull" type = "checkbox" name = "problem" value = "Dull skin"></input>
+                    <label for= "dull">Dull skin</label><br>
+        
+                    <input id = "hyperpigmentation" type = "checkbox" name = "problem" value = "Hyperpigmentation"></input>
+                    <label for= "hyperpigmentation">Hyperpigmentation</label><br>
+                    
+                    <input id = "acne" type = "checkbox" name = "problem" value = "Acne"></input>
+                    <label for= "acne">Acne</label><br>
+
+                    <input id = "capillaries" type = "checkbox" name = "problem" value = "Dilated capillaries"></input>
+                    <label for= "capillaries">Dilated capillaries</label><br>
+
+                    <input id = "blackheads" type = "checkbox" name = "problem" value = "Blackheads"></input>
+                    <label for= "blackheads">Blackheads</label><br>
+
+                    <input id = "rough" type = "checkbox" name = "problem" value = "Rough Texture"></input>
+                    <label for= "rough">Rough Texture</label><br>
+
+                    <input id = "inflammation" type = "checkbox" name = "problem" value = "Inflammation"></input>
+                    <label for= "inflammation">Inflammation</label><br>
+                </ul>
+            </form>
+
+            <button id= "submit_new_product" class="submit_btn">Submit</button>
+
+        </form>
+        </div>
+    </div>
+
+{% endblock %}
+
