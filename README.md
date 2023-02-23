@@ -3,7 +3,7 @@
 ## Demo
 
 <a href="https://www.youtube.com/watch?v=HRqmaiD-cFc&ab_channel=AyshaJamal" target="_blank"><img src="./Homepage.png" 
-alt="demo video" border="10" /></a>
+alt="demo video" width="500" height="250" border="10" /></a>
 
 
 [Demo Link](https://www.youtube.com/watch?v=HRqmaiD-cFc&ab_channel=AyshaJamal)
